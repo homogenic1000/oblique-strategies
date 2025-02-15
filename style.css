@@ -1,0 +1,158 @@
+body, html {
+  user-select: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #eeee;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@font-face {
+  font-family: 'Arial'; /* Nom de ta police */
+  src: url('JetBrainsMono-Regular.ttf') format('truetype'); /* Le chemin vers ton fichier .ttf */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+h2 {
+  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#miniHome, .card, #clock, #miniWeather {
+  position: absolute;
+}
+
+/* Conteneur principal */
+#app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  background-color: #eeee;
+}
+
+/* Widgets */
+.miniHome, .card, #clock, #miniWeather {
+  position: absolute;
+  cursor: move;
+  width: 20rem;
+  max-width: calc(100% - 2rem);
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.miniHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.miniHome button {
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.miniHome button:hover {
+  transform: scale(1.2);
+}
+
+.miniHome img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  pointer-events: none;
+}
+
+.card {
+  top: 200px;
+  left: 20px;
+  text-align: left;
+  height: 10rem;
+}
+
+#clock {
+  top: 20px;
+  right: 20px;
+  font-size: 50px;
+  font-family: 'Technology', sans-serif;
+  text-align: center;
+}
+
+#miniWeather {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  bottom: 20px;
+  left: 20px;
+  text-align: center;
+  padding: 1rem;
+  height: max-content;
+  
+}
+.city{
+font-weight: bold;
+font-size: 30px;;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.weather-item .icon {
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+}
+
+#miniWeatherInfo {
+  gap: 50px;
+}
+
+.miniMiror {
+  border-radius: 48px;
+
+  position: absolute;
+  cursor: move;
+  padding: 1rem; /* Applique une marge intérieure égale sur tous les côtés */
+  border-radius: 1rem;
+  height: auto;
+  background-color: white;
+  width: 30rem; /* Ou toute autre valeur fixe souhaitée */
+  max-width: 100%; /* S'assure que le contenu ne dépasse pas */
+  box-sizing: border-box; /* Important pour inclure la marge et le padding dans la largeur totale */
+}
+
+.miniMiror h2 {
+  padding: 0;
+  margin: 0rem 0rem 1rem 0rem; /* Marge autour de l'élément sans affecter l'extérieur */
+  font-size: 18px;
+  text-align: center;
+  z-index: 1; /* S'assurer que le texte soit au-dessus du flux vidéo */
+}
+
+video {
+  margin: 0;
+  border-radius: 1rem;
+  width: 100%; /* Laisse le vidéo s'adapter à la largeur du conteneur */
+  height: auto; /* Ajuste la hauteur proportionnellement à la largeur */
+  object-fit: cover;
+}
