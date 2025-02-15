@@ -25,11 +25,32 @@
         <img class="imgb" src="notion.png" alt="Open Notion" />
       </button>
     </div>
-
-
     <div class="card" id="speCard">
-      <h1 id="Strategy">More cowbell!</h1>
+      <h1 id="stratSTRING"> More Cowbell!!</h1>
     </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var Strategy = document.getElementById('stratSTRING');
+        const Stratlist = [
+          "Loving you is complicated",
+          "I place blame when you steal",
+          "Place shame when you steal",
+          "Feel like you ain't shit",
+          "Feel like you don't feel, confidence in yourself",
+          "Breakin' on marble floors",
+          "Watchin' anonymous strangers tellin' me that I'm yours",
+          "Breakin' on marble floors",
+          "But you ain't shit I'm convinced your talent's nothin' special",
+          "What can I blame him for",
+          "Then he died, God himself will say you fuckin' failed",
+          "You ain't try",
+          "I remeber you was conflited",
+        ];
+        Strategy.innerHTML = Stratlist[Math.floor(Stratlist.length * Math.random())];
+      });
+    </script>
+
 
     <div id="miniWeather" class="np-element np-hover-inverse np-square-xxl np-shadow-inverse" >
       <div id="miniWeatherInfo"></div>
@@ -46,9 +67,6 @@
     </div>
   </div>
 
-    #video{
-      transform: scaleX(-1) ;
-    }
 </body>
 
 </html>

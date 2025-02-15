@@ -1,5 +1,10 @@
 console.log("Ton script super cool est bien relié");
 
+
+
+
+
+
 // Fonction pour récupérer les données météo via API
 async function miniWeather() {
   const apiKey = 'b5264219f5fdca65f3424d3ce2b4d002'; // Ta clé API
@@ -56,12 +61,12 @@ function savePosition(elementId, x, y) {
 function updateClock() {
   const clock = document.getElementById("clock");
   const now = new Date();
-  
+
   // Récupération des heures, minutes, secondes et millisecondes
   const hours = String(now.getHours()).padStart(2, '0');
   const minutes = String(now.getMinutes()).padStart(2, '0');
   const seconds = String(now.getSeconds()).padStart(2, '0');
-  
+
   // Mise à jour de l'affichage de l'heure, y compris les millisecondes
   clock.textContent = `${hours}:${minutes}:${seconds}`;
 }
@@ -73,7 +78,7 @@ window.onload = function () {
   loadPosition('speMiniHome');
   loadPosition('speCard');
   loadPosition('miMi');
-  
+
   // Appel des autres fonctions nécessaires
   miniWeather();
   setInterval(updateClock, 1000);
@@ -128,10 +133,10 @@ async function startCamera() {
   try {
       // Demander l'accès à la caméra de l'utilisateur
       const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-      
+
       // Récupérer l'élément vidéo
       const video = document.getElementById('video');
-      
+
       // Attacher le flux vidéo à l'élément <video>
       video.srcObject = stream;
   } catch (error) {
